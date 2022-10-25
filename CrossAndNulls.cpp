@@ -2,34 +2,21 @@
 
 #include <vcl.h>
 #pragma hdrstop
-#include <tchar.h>
+USERES("Project1.res");
+USEFORM("Unit1.cpp", Form1);
 //---------------------------------------------------------------------------
-USEFORM("XOMain.cpp", Form1);
-//---------------------------------------------------------------------------
-WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
+WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
-	try
-	{
-		Application->Initialize();
-		Application->MainFormOnTaskBar = true;
-		Application->CreateForm(__classid(TForm1), &Form1);
-		Application->Run();
-	}
-	catch (Exception &exception)
-	{
-		Application->ShowException(&exception);
-	}
-	catch (...)
-	{
-		try
-		{
-			throw Exception("");
-		}
-		catch (Exception &exception)
-		{
-			Application->ShowException(&exception);
-		}
-	}
-	return 0;
+        try
+        {
+                 Application->Initialize();
+                 Application->CreateForm(__classid(TForm1), &Form1);
+                 Application->Run();
+        }
+        catch (Exception &exception)
+        {
+                 Application->ShowException(&exception);
+        }
+        return 0;
 }
 //---------------------------------------------------------------------------

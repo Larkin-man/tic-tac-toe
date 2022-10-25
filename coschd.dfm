@@ -1,47 +1,26 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
-  Caption = 'Form1'
-  ClientHeight = 276
-  ClientWidth = 397
+  Left = 364
+  Top = 177
+  BorderStyle = bsDialog
+  Caption = 'Крестики нолики'
+  ClientHeight = 300
+  ClientWidth = 300
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -16
-  Font.Name = 'Tahoma'
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  PopupMenu = PopupMenu1
+  OnMouseDown = FormMouseDown
+  OnPaint = FormPaint
   PixelsPerInch = 96
-  TextHeight = 19
-  object Memo1: TMemo
-    Left = 212
-    Top = 0
-    Width = 185
-    Height = 276
-    Align = alRight
-    Lines.Strings = (
-      'Memo1')
-    TabOrder = 0
-    ExplicitLeft = 104
-    ExplicitTop = 64
-    ExplicitHeight = 89
-  end
-  object Button1: TButton
-    Left = 24
-    Top = 16
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 1
-    OnClick = Button1Click
-  end
-  object Button2: TButton
-    Left = 24
-    Top = 56
-    Width = 75
-    Height = 25
-    Caption = 'Button2'
-    TabOrder = 2
-    OnClick = Button2Click
+  TextHeight = 13
+  object PopupMenu1: TPopupMenu
+    object N1: TMenuItem
+      Caption = 'Новая игра'
+      OnClick = N1Click
+    end
   end
 end
